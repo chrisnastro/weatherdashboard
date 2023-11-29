@@ -12,36 +12,35 @@
 </head>
 
 <body>
-    <div class="card topheader text-center">
+    <div class="card topheader text-center mb-3">
         <h1>Weather Dashboard</h1>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="card col-3">
-                <h4>Enter a city name:</h4>
-                <div class="input-group mb-3">
-                    
-                    <input type="text" class="form-control" id="currentSearch" style="width: 100%">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="searchCityBtn" style="width: 100%">Search City</button>
-                    </div>
-                    <div class="list-group" id="recentCities">
+            <div class="col-3 searchCol">
+                <h4 class="mt-3">Enter a city name:</h4>
+                <div class="input-group mb-4">
+
+                    <input type="text" class="form-control mb-3" id="currentSearch" style="width: 100%">
+                    <div class="input-group-append"></div>
+                    <button class="btn btn-primary btn-block mb-3" type="button" id="searchCityBtn">Search
+                        City</button>
+
+                    <div class="list-group" id="recentCities" style="width: 100%">
                     </div>
                 </div>
             </div>
-            <div class="card col-9">
-                <div class="card-body" style="width: 100%" id="currentCityContainer">
-                    The current weather info will go here
-                </div>
-                <div class="card-body" id="fiveDayContainer">
-                    Five Day forecast
-                </div>
+            <div class="col-9">
+                <div class="card mb-3" style="width: 100%" id="currentCityContainer"></div>
+
+                <div class="card" id="fiveDayContainer"></div>
+
             </div>
         </div>
     </div>
-   
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="./assets/script.js"></script>
 </body>
 
