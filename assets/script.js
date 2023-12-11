@@ -121,6 +121,7 @@ function initWeather() {
     $("#currentCityContainer").html(currentWeatherDiv);
   }
 
+
   async function displayFiveDayForecast() {
     var queryURL =
       "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -131,6 +132,7 @@ function initWeather() {
       url: queryURL,
       method: "GET",
     });
+    console.log(response);
     var forecastDiv = $("<div class='card-body' id='fiveDayForecast'>");
     var forecastHeader = $("<h5 class='card-header border-secondary'>").text(
       "Five Day Forecast"
@@ -145,8 +147,7 @@ function initWeather() {
       var cardBody = $("<div class='card-body'>");
       var date = new Date();
       var val =
-        date.getMonth() +
-        1 +
+        (date.getMonth() + 1) +
         "/" +
         (date.getDate() + i + 1) +
         "/" +
